@@ -69,6 +69,3 @@ class Basket():
 
     def save(self):
         self.session.modified = True
-
-
-

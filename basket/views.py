@@ -40,4 +40,3 @@ def view_basket(request):
     context = {'basket_items': basket_items}
     return render(request, 'store/basket/basket.html', context)
     
-
