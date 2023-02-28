@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'store',
     'basket',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Basket session ID
+BASKET_SESSION_ID = 'basket'
+
+# Custom user model
+AUTH_USER_MODEL = 'accounts.UserBase'
+LOGIN_REDIRECT_URL = '/accounts/dashboard'
+LOGIN_URL = '/accounts/login/'
