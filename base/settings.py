@@ -130,3 +130,5 @@ BASKET_SESSION_ID = 'basket'
 AUTH_USER_MODEL = 'accounts.UserBase'
 LOGIN_REDIRECT_URL = '/accounts/dashboard'
 LOGIN_URL = '/accounts/login/'
+
+

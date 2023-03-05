@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import render
 from django.contrib.sites.shortcuts import get_current_site
 from django.template.loader import render_to_string
 from django.utils.encoding import force_bytes, force_text
@@ -7,9 +7,6 @@ from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from .forms import RegistrationForm
 
 def account_register(request):
-    
-    if request.user.is_authenticated:
-        return redirect('/')
     
     if request.method == 'POST':
         registerForm = RegistrationForm(request.POST)
@@ -32,3 +29,4 @@ def account_register(request):
     else:
         registerForm = RegistrationForm()
         return render(request, 'account/registration/register.html', {'form': registerForm})
+
