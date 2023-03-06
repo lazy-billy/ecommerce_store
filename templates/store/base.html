@@ -42,7 +42,7 @@
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form> {% endcomment %}
 
-                    <a type="button" role="button" class="btn btn-outline-secondary" href="account:logout">Logout</a>
+                    <a type="button" role="button" class="btn btn-outline-secondary" href="{% url "account:logout" %}">Logout</a>
                     <a type="button" role="button" class="btn btn-outline-secondary mx-3" href="{% url "account:dashboard" %}">Account</a>
                     <a type="button" role="button" href="{% url "basket:view_basket" %}"
                         class="btn btn-outline-secondary">
