@@ -21,6 +21,10 @@ urlpatterns = [
                                                                 template_name='account/user/password_reset_confirm.html',
                                                                 success_url='/account/password_reset_complete/', 
                                                                 form_class=PwdResetConfirmForm), name="password_reset_confirm"),
+    path('password_reset/password_reset_email_confirm/',
+         TemplateView.as_view(template_name="account/user/reset_status.html"), name='password_reset_done'),
+    path('password_reset_complete/',
+         TemplateView.as_view(template_name="account/user/reset_status.html"), name='password_reset_complete'),
     path('dashboard/', views.dashboard, name='dashboard'),  # User dashboard
     path('profile/edit/', views.edit_details, name='edit_details'),
     path('profile/delete_user/', views.delete_user, name='delete_user'),
